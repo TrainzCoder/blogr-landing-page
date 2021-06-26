@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+
+:root {
+  --intro-cta: linear-gradient(to right, #ff8f70, #ff3d54);
+  --body-gradient: linear-gradient(to right, #2c2d3f, #3f4164);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-bold font-overpass;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.intro {
+  background-position: center;
+  background-size: 150%;
+}
+
+.state {
+  background-position: -65% 80%;
+}
+
+@media (max-width: 516px) {
+  .intro {
+    background-size: 370%;
+    background-position: 37% 40%;
+  }
+
+  .state {
+    background-position: 50% -290%;
+    background-size: 148%;
+  }
+
+  .editor {
+    content: url("../images/illustration-editor-mobile.svg");
+  }
+
+  .laptop {
+    content: url("../images/illustration-laptop-mobile.svg");
+  }
+
+  .arrow {
+    content: url("../images/icon-arrow-dark.svg");
+  }
+}
+
+@tailwind utilities;
